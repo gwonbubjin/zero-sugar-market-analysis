@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -21,8 +22,14 @@ category_terms = {
 # =========================
 # 2) 데이터 로드
 # =========================
-trade_path = "C:\\Users\\melon\\Documents\\카카오톡 받은 파일\\수출입 실적(품목별)_20260122.xlsx"  # 업로드 파일 경로
-trade = pd.read_excel(trade_path)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_PATH = os.path.join(
+    BASE_DIR,
+    "datasets",
+    "수출입 실적(품목별)_20260122.xlsx"
+)
+
+df = pd.read_excel(DATA_PATH)
 
 # 컬럼명 공백 정리
 trade.columns = [str(c).strip() for c in trade.columns]
