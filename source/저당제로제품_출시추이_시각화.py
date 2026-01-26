@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-
+import os
 # =========================
 # 0) 한글 폰트 설정 (Windows)
 # =========================
@@ -17,8 +17,10 @@ except:
 # =========================
 # 1) 엑셀 불러오기 (⭐ 이 파일은 header=0이 맞음)
 # =========================
-file_path = r"C:\\Users\\melon\\Desktop\\제로저당식품.xlsx"
-df = pd.read_excel(file_path, engine="openpyxl", header=0)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "zero_sugar_products.xlsx")
+
+df = pd.read_excel(DATA_PATH)
 
 # 컬럼/문자열 정리
 df.columns = df.columns.astype(str).str.replace("\n", "", regex=False).str.strip()
