@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import unicodedata
@@ -9,7 +10,10 @@ plt.rcParams["axes.unicode_minus"] = False
 # =========================
 # 1) 데이터 로드
 # =========================
-df = pd.read_excel("C:\\Users\\melon\\Downloads\\zero.xlsx")
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "zero.xlsx")
+
+df = pd.read_excel(DATA_PATH)
 
 # =========================
 # 2) 필수 컬럼 체크
