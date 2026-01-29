@@ -11,7 +11,7 @@ plt.rcParams["axes.unicode_minus"] = False
 # 1) 데이터 로드
 # =========================
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "data", "zero.xlsx")
+DATA_PATH = os.path.join(BASE_DIR, "data", "저당.제로식품_대분류_카테고리추가.xlsx")
 
 df = pd.read_excel(DATA_PATH)
 
