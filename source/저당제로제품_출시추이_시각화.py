@@ -18,7 +18,7 @@ except:
 # 1) 엑셀 불러오기 (⭐ 이 파일은 header=0이 맞음)
 # =========================
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "data", "제로저당식품.xlsx")
+DATA_PATH = os.path.join(BASE_DIR, "data", "제로저당식품 (2).xlsx")
 
 df = pd.read_excel(DATA_PATH)
 
