@@ -9,7 +9,7 @@ plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
 # =========================
-# 1) 카테고리-감미료 매핑 (너가 만든 가설)
+# 1) 카테고리-감미료 매핑 (직접 넣음)
 # =========================
 category_terms = {
     "소스/식사 대용군": ["알룰로스", "사카린나트륨"],
